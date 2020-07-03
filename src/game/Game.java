@@ -12,18 +12,18 @@ public class Game {
         userInput = new UserInput();
 
         getInstructions();
-        guessing(0, limit+1);
+        guessUsingBinarySearch(0, limit+1);
     }
 
-    private void guessing(int left, int right){
+    private void guessUsingBinarySearch(int left, int right){
         int middle = (left + right) / 2;
         String question = printGuess(middle);
         char command = userInput.getAnswer(question);
 
         if(command == 'l'){
-            guessing(left, middle);
+            guessUsingBinarySearch(left, middle);
         }else if(command == 'h'){
-            guessing(middle, right);
+            guessUsingBinarySearch(middle, right);
         }else{
             System.out.printf("Ok! Your number is %d\n", middle);
             String str = guessCount-1 == 1? "guess": "guesses";
