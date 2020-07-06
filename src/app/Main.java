@@ -7,5 +7,4 @@ public class Main {
         Game guessingGame = new Game();
         guessingGame.startGuessing();
     }
-
 }

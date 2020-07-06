@@ -8,7 +8,7 @@ public class Game {
     private UserInput userInput;
 
     public void startGuessing(){
-        guessCount = 1;
+        guessCount = 0;
         userInput = new UserInput();
 
         getInstructions();
@@ -17,29 +17,35 @@ public class Game {
 
     private void guessUsingBinarySearch(int left, int right){
         int middle = (left + right) / 2;
-        String question = printGuess(middle);
-        char command = userInput.getAnswer(question);
+        userInput.setQuestion(printGuess(middle));
+        userInput.scanConsole(new char[]{'l', 'h', 'y'});
 
-        if(command == 'l'){
-            guessUsingBinarySearch(left, middle);
-        }else if(command == 'h'){
-            guessUsingBinarySearch(middle, right);
-        }else{
-            System.out.printf("Ok! Your number is %d\n", middle);
-            String str = guessCount-1 == 1? "guess": "guesses";
-            System.out.printf("Your number was found in %d %s\n", guessCount-1, str);
-            playAgain();
+        switch (userInput.getInput()){
+            case 'l':
+                guessUsingBinarySearch(left, middle);
+                break;
+            case 'h':
+                guessUsingBinarySearch(middle, right);
+                break;
+            case 'y':
+                System.out.printf("Ok! Your number is %d\n", middle);
+                String str = guessCount == 1? "guess" : "guesses";
+                System.out.printf("Your number was found in %d %s\n", guessCount, str);
+                playAgain();
         }
     }
 
     private void playAgain(){
-        String question = "\nDo you want to play again\nType (y/n)\n";
-        boolean answer = userInput.getBinaryAnswer(question);
+        userInput.setQuestion("\nDo you want to play again?\nType (y/n)\n");
+        userInput.scanConsole(new char[]{'y', 'n'});
 
-        if(answer){
-            startGuessing();
-        }else{
-            System.out.println("Bye! Thanks for playing");
+        switch (userInput.getInput()){
+            case 'y':
+                startGuessing();
+                break;
+            case 'n':
+                System.out.println("Bye! Thanks for playing");
+                break;
         }
     }
 
@@ -53,8 +59,7 @@ public class Game {
     }
 
     private String printGuess(int guess){
-        String str = String.format("[%d] Is it %d? (l, h, y): \n", guessCount, guess);
         guessCount++;
-        return str;
+        return String.format("[%d] Is it %d? (l, h, y): \n", guessCount, guess);
     }
 }
