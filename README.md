@@ -13,5 +13,10 @@ This is a fully functional console based guessing game that uses Java. The game 
    - [IDE](https://www.jetbrains.com/idea/download/#section=windows)
 2. Creating a new java project
    - Open IntelliJ IDEA to begin creating a new project
-   - Click on **Create New Project**
+   - Click on **Create New Project** 
+   <br><img src="/images/create-new-project.png" alt="create-new-project-image" height= 200 width = 200>
+   - Click **Next** 
+      > NOTE: Make sure you have selected the project SDK
+   
+  
    
