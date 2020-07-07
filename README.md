@@ -47,7 +47,6 @@ public class Controller{
    public static void main(String[] args) {
    }
 }
-
 ```
 4. Import the Game class (We will create this class later)
 ```java
@@ -58,7 +57,7 @@ import game.Game;
 
 public static void main(String[] args) {
 }
-
+```
 5. Create an instance of the **Game class** inside of **main** 
 ```java
 package app;
