@@ -26,7 +26,8 @@ This is a fully functional console-based guessing game written in Java. The game
    <br><img src="/images/name-location-image.png" alt="name-location-image" height= 200 width = 200><br>
    - Click **Finish**
    
-<h1 id="Controller">Create the Controller Class<h1>
+<br><h3 id="Controller">Create the Controller Class<h3><br>
+  
 1. Create the app package
    - On your the left side of the window right click the **scr** file
    <br><img src="/images/src-image.png" alt="src-image" height= 100 width = 200><br>
