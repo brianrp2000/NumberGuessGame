@@ -17,6 +17,7 @@ This is a fully functional console based guessing game that uses Java. The game 
    <br><img src="/images/create-new-project.png" alt="create-new-project-image" height= 200 width = 200>
    - Click **Next** 
       > NOTE: Make sure you have selected the project SDK
+   <br><img src="/images/next-image.png" alt="create-new-project-image" height= 200 width = 200>
    
   
    
