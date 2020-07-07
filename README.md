@@ -21,4 +21,18 @@ This is a fully functional console-based guessing game written in Java. The game
    - Type the name of the project and select its location
    <br><img src="/images/name-location-image.png" alt="name-location-image" height= 200 width = 200><br>
    - Click **Finish**
-3. 
+3. Create the app package
+   - On your the left side of the window right click the **scr** file
+   <br><img src="/images/src-image.png" alt="src-image" height= 100 width = 200><br>
+   - Click **New**
+   - Click **Package**
+   - Enter the name of the package, which is **app**
+4. Create a java class inside the **app** package
+   - On your the left side of the window right click the **app** package
+   <br><img src="/images/app-image.png" alt="app-image" height= 100 width = 200><br>
+   - Click **New**
+   - Click **Java Class**
+   - Enter the name of the package, which is **Controller**
+   <br><img src="/images/controller-java-class-name.png" alt="controller-java-class-name-image" height= 100 width = 200><br> 
+   
+   
