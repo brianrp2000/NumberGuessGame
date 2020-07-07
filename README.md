@@ -19,5 +19,6 @@ This is a fully functional console-based guessing game written in Java. The game
    <br><img src="/images/next-image.png" alt="next-image" height= 200 width = 200><br>
    - CLick **Next** again
    - Type the name of the project and select its location
-   <br><img src="/images/name-location.png" alt="name-location-image" height= 200 width = 200><br>
+   <br><img src="/images/name-location-image.png" alt="name-location-image" height= 200 width = 200><br>
    - Click **Finish**
+3. 
