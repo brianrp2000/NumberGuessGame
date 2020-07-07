@@ -106,9 +106,15 @@ package io;
 import java.util.Scanner;
 
 public class UserInput{
-   
 }
 ```
+4. Inside the UserInput class curly brackets we will need to enter its variables
+```java
+private final Scanner sc = new Scanner(System.in);
+private char input;
+private String question;
+```
+5. 
 
 
 ### Create the Game Class
