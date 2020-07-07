@@ -194,13 +194,13 @@ private void printErrorMsg(char[] array){
 ### Create the Game Class
 1. Create the game package
    - On your the left side of the window right click the **scr** file
-   <br><img src="/images/src-game-image.png" alt="src-game-image" height= 100 width = 200><br>
+   <br><img src="/images/src-game-image.png" alt="src-game-image" height= 150 width = 200><br>
    - Click **New**
    - Click **Package**
    - Enter the name of the package, which is **game**
 2. Create a java class inside the **game** package
    - On your the left side of the window right click the **game** package
-   <br><img src="/images/io-image.png" alt="io-image" height= 150 width = 200><br>
+   <br><img src="/images/game-image.png" alt="game-image" height= 150 width = 200><br>
    - Click **New**
    - Click **Java Class**
    - Enter the name of the class, which is **Game**
