@@ -205,3 +205,20 @@ private void printErrorMsg(char[] array){
    - Click **Java Class**
    - Enter the name of the class, which is **Game**
    <br><img src="/images/game-class-image.png" alt="game-class-image" height= 150 width = 200><br> 
+3. Import the **userInput** class
+```java
+package game;
+
+//new line 
+import io.UserInput;
+
+public class Game{
+}
+```
+4.  Inside the **Game** class curly brackets we will need to enter its variables
+```java
+private final int limit = 100;
+private int guessCount;
+private UserInput userInput;
+``` 
+5. 
