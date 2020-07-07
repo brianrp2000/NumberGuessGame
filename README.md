@@ -34,5 +34,10 @@ This is a fully functional console-based guessing game written in Java. The game
    - Click **Java Class**
    - Enter the name of the package, which is **Controller**
    <br><img src="/images/controller-java-class-name.png" alt="controller-java-class-name-image" height= 100 width = 200><br> 
-   
-   
+ 5. Make the class **Controller** the main driver by adding the following line inside its curly brackets
+```java
+public static void main(String[] args) {
+
+    }
+}
+```
