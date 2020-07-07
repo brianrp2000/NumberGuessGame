@@ -9,7 +9,7 @@ This is a fully functional console-based guessing game written in Java. The game
    
 ### Complete Project Structure
 <img src="/images/project-structure.png" alt="project-structure-image" height= 200 width = 200> <br>
->Note: If you know how to get the above structure in IntelliJ IDEA go ahead and skip to [Create the Controller Class, step 3](#create-the-controller-class)
+>Note: If you know how to get the above structure in IntelliJ IDEA go ahead and skip to [Create the Controller Class](#create-the-controller-class). YOu can also start the creation of each Class from step 3
 
 ### Steps for creating a new Project:
 1. Make sure you have installed the materials needed
@@ -87,7 +87,7 @@ public class Controller{
 ### Create the UserInput Class
 1. Create the io package
    - On your the left side of the window right click the **scr** file
-   <br><img src="/images/src-image.png" alt="src-image" height= 100 width = 200><br>
+   <br><img src="/images/src-io-image.png" alt="src-io-image" height= 100 width = 200><br>
    - Click **New**
    - Click **Package**
    - Enter the name of the package, which is **io**
@@ -192,3 +192,16 @@ private void printErrorMsg(char[] array){
    - Print a message with the string we have just built
    
 ### Create the Game Class
+1. Create the game package
+   - On your the left side of the window right click the **scr** file
+   <br><img src="/images/src-game-image.png" alt="src-game-image" height= 100 width = 200><br>
+   - Click **New**
+   - Click **Package**
+   - Enter the name of the package, which is **game**
+2. Create a java class inside the **game** package
+   - On your the left side of the window right click the **game** package
+   <br><img src="/images/io-image.png" alt="io-image" height= 150 width = 200><br>
+   - Click **New**
+   - Click **Java Class**
+   - Enter the name of the class, which is **Game**
+   <br><img src="/images/game-class-image.png" alt="game-class-image" height= 150 width = 200><br> 
