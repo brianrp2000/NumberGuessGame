@@ -114,7 +114,38 @@ private final Scanner sc = new Scanner(System.in);
 private char input;
 private String question;
 ```
-5. 
+5. Create the public method called **scanConsole** that takes a char array as input, this is the method in char of scanning user input from the console
+```java
+public void scanConsole(char[] array){
+        System.out.print(question);
+        input =  sc.next().toLowerCase().charAt(0);
+        validateInput(array);
+}
+```
+6. As we saw in the **scanConsole** method we need to define another method call **validateInput** that takes a char array as input, in here we will make sure that the user enters a command specified in the char array of possible user commands 
+```java
+private void validateInput(char[] array){
+   boolean isValidInput = false;
 
+   for (char aCommand : array) {
+      if (input == aCommand){
+          isValidInput = true;
+          break;
+      }
+   }
+
+   if (!isValidInput){
+      printErrorMsg(array);
+      scanConsole(array);
+      validateInput(array);
+   }
+ }
+```
+   - the first thing the method does is declaring a boolean variable that will track the validity of the user input
+   - Then we check if the user input is found in the char array taken as input and if it is the variable will change to true
+   - Eventually we check if the variable is still false, if so it means that the user input is invalid
+      - We now print the error message
+      - Scan the console again for a valid input
+      - Call recursively the validateInput method to check again the validity of the input
 
 ### Create the Game Class
