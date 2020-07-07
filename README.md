@@ -113,8 +113,19 @@ public class UserInput{
 private final Scanner sc = new Scanner(System.in);
 private char input;
 private String question;
-```
-5. Create the public method called **scanConsole** that takes a char array as input, this is the method in char of scanning user input from the console
+``` 
+5. Create a *setter* for the **question** variable 
+```java
+public void setQuestion(String question){
+        this.question = question;
+}
+``` 
+6. Create a *getter* for the **input** variable
+```java
+public char getInput(){
+        return input;
+}
+7. Create the public method called **scanConsole** that takes a char array as input, this is the method in charge of scanning user input from the console
 ```java
 public void scanConsole(char[] array){
         System.out.print(question);
@@ -122,7 +133,7 @@ public void scanConsole(char[] array){
         validateInput(array);
 }
 ```
-6. As we saw in the **scanConsole** method we need to define another method call **validateInput** that takes a char array as input, in here we will make sure that the user enters a command specified in the char array of possible user commands 
+8. As we saw in the **scanConsole** method we need to define another method call **validateInput** that takes a char array as input, in here we will make sure that the user enters a command specified in the char array of possible user commands 
 ```java
 private void validateInput(char[] array){
    boolean isValidInput = false;
@@ -147,7 +158,7 @@ private void validateInput(char[] array){
       - We now print the error message
       - Scan the console again for a valid input
       - Call recursively the validateInput method to check again the validity of the input
-7. As we saw in the **validateInput** method, we need to create a method called **printErrorMsg** that takes an char array as an input. This method generates the message we print when the user enters a character outside the possible command range.
+9. As we saw in the **validateInput** method, we need to create a method called **printErrorMsg** that takes an char array as an input. This method generates the message we print when the user enters a character outside the possible command range.
 ```java
 private void printErrorMsg(char[] array){
         StringBuilder str = new StringBuilder();
