@@ -16,7 +16,8 @@ This is a fully functional console-based guessing game written in Java. The game
    - Click on **Create New Project**
    <br><img src="/images/create-new-project.png" alt="create-new-project-image" height= 200 width = 200> <br>
    - Click **Next**. Make sure you have selected the project SDK
-   <br><img src="/images/next-image.png" alt="create-new-project-image" height= 200 width = 200><br>
-   
-  
-   
+   <br><img src="/images/next-image.png" alt="next-image" height= 200 width = 200><br>
+   - CLick **Next** again
+   - Type the name of the project and select its location
+   <br><img src="/images/name-location.png" alt="name-location-image" height= 200 width = 200><br>
+   - Click **Finish**
