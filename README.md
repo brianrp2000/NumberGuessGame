@@ -56,24 +56,30 @@ package app;
 //new line
 import game.Game; 
 
-public static void main(String[] args) {
+public class Controller{
+   public static void main(String[] args) {
+   }
 }
 ```
 5. Create an instance of the **Game class** inside of **main** 
 ```java
 package app;
 import game.Game;
-public static void main(String[] args) {
-   //new line added
-   Game guessingGame = new Game();
+public class Controller{
+   public static void main(String[] args) {
+      //new line added
+      Game guessingGame = new Game();
+   }
 }
 ```
 6. The Game class will have a method call **startGuessing** which we will call now
 ```java
-public static void main(String[] args) {
-   Game guessingGame = new Game();
-   //new line added
-   guessingGame.startGuessing();
+public class Controller{
+   public static void main(String[] args) {
+      Game guessingGame = new Game();
+      //new line added
+      guessingGame.startGuessing();
+   }
 }
 ```
 7. Because we still haven't created the Game Class the IDE will mark the above code as wrong by telling you: Cannot resolve symbol 'Game'.  We will do this in [here](#create-the-game-class)
@@ -92,7 +98,17 @@ public static void main(String[] args) {
    - Click **Java Class**
    - Enter the name of the class, which is **UserInput**
    <br><img src="/images/userInput-class-image.png" alt="userInput-class-image" height= 150 width = 200><br> 
-3. 
+3. Import the Scanner class
+```java
+package io;
+
+//new line
+import java.util.Scanner;
+
+public class UserInput{
+   
+}
+```
 
 
 ### Create the Game Class
