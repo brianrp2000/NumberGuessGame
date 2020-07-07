@@ -1,11 +1,11 @@
 # NumberGuessGame
 
-This is a fully functional console based guessing game that uses Java. The game tries to guess what number you are thinking of. It follows a binary search algorithm implemented recursively and uses user input that specifies whether the assumption was less than or greater than the number the user wanted.
+This is a fully functional console-based guessing game written in Java. The game tries to guess what number you are thinking of. It follows a binary search algorithm implemented recursively and uses user input that specifies whether the assumption was less than or greater than the number the user wanted. 
 
 ### Materials Needed:
-- JDK 
-- IDE (Preferably IntelliJ IDEA Community Edition)
-
+- JDK (Java Development Kit)
+- IDE (Integreted Development Environment)
+   - Preferably IntelliJ IDEA Community Edition
 ### Steps for creating the game:
 
 1. Make sure you have install the materials needed
