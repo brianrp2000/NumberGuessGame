@@ -9,7 +9,7 @@ This is a fully functional console-based guessing game written in Java. The game
    
 ### Complete Project Structure
 <img src="/images/project-structure.png" alt="project-structure-image" height= 200 width = 200> <br>
->Note: If you know how to get the above structure in IntelliJ IDEA go ahead and skip to [Create the Controller Class](#create-the-controller-class). YOu can also start the creation of each Class from step 3
+>Note: If you know how to get the above structure in IntelliJ IDEA go ahead and skip to [Create the Controller Class](#create-the-controller-class). You can also start the creation of each Class from step 3
 
 ### Steps for creating a new Project:
 1. Make sure you have installed the materials needed
@@ -221,4 +221,54 @@ private final int limit = 100;
 private int guessCount;
 private UserInput userInput;
 ``` 
-5. 
+5. Create the public method called **startGuessing**, this is the method in charge of initializing variables and start the function that allows the computer to make guesses
+```java
+public void startGuessing(){
+        guessCount = 0;
+        userInput = new UserInput();
+
+        getInstructions();
+        guessUsingBinarySearch(0, limit+1);
+}
+```
+   - Initialize the guessCount variable
+   - Create a UserInput object
+   - Print the instruction of the game
+   - Call the method in charge of guessing with a left input of zero and a right input of limit+1
+      >Note: The input is taking limit+1 so that the range of guesses go from 0 to the limit inclusive
+6. As we saw in the method called **startGuessing**, we need to create a method call **getInstructions**. This method just prints what the user needs to know before the computer can start guessing.
+```java
+private void getInstructions(){
+   System.out.println();
+   System.out.printf("Think of a number between 0-%d\n", limit);
+   System.out.println("Answer with: ");
+   System.out.println("\tl (your num is lower)");
+   System.out.println ("\th (your num is higher)");
+   System.out.println ("\ty (guess is right).");
+}
+```
+7. We also saw in the method **startGuessing** that we need to create another method called **guessUsingBinarySearch**. This method has 2 inputs: the left part and the right part of the range where the number the user want can be. This method is a recursive implementation of the Binary Search Algorithm, where we have a middle index and in each implementation the range where the number the user want can be is halved by moving the left or right marker to the value of that middle index.
+```java
+private void guessUsingBinarySearch(int left, int right){
+   int middle = (left + right) / 2;
+   userInput.setQuestion(printGuess(middle));
+   userInput.scanConsole(new char[]{'l', 'h', 'y'});
+
+   switch (userInput.getInput()){
+      case 'l':
+          guessUsingBinarySearch(left, middle);
+          break;
+      case 'h':
+          guessUsingBinarySearch(middle, right);
+          break;
+      case 'y':
+          System.out.printf("Ok! Your number is %d\n", middle);
+          String str = guessCount == 1? "guess" : "guesses";
+          System.out.printf("Your number was found in %d %s\n", guessCount, str);
+          playAgain();
+          break;
+   }
+}
+```
+- 
+    
