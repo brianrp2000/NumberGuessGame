@@ -9,7 +9,7 @@ This is a fully functional console-based guessing game written in Java. The game
    
 ### Complete Project Structure
 <img src="/images/project-structure.png" alt="project-structure-image" height= 200 width = 200> <br>
->Note: If you know how to get the above structure in IntelliJ IDEA go ahead and skip to <a href = "#Controller">Create the Controller Class, step 3<a>
+>Note: If you know how to get the above structure in IntelliJ IDEA go ahead and skip to [Create the Controller Class, step 3](#create-the-controller-class)
 
 ### Steps for creating a new Project:
 1. Make sure you have installed the materials needed
@@ -26,8 +26,7 @@ This is a fully functional console-based guessing game written in Java. The game
    <br><img src="/images/name-location-image.png" alt="name-location-image" height= 200 width = 200><br>
    - Click **Finish**
    
-<br><h3 id="Controller">Create the Controller Class<h3><br>
-  
+### Create the Controller Class 
 1. Create the app package
    - On your the left side of the window right click the **scr** file
    <br><img src="/images/src-image.png" alt="src-image" height= 100 width = 200><br>
