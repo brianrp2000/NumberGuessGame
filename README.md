@@ -38,7 +38,7 @@ This is a fully functional console-based guessing game written in Java. The game
    <br><img src="/images/app-image.png" alt="app-image" height= 100 width = 200><br>
    - Click **New**
    - Click **Java Class**
-   - Enter the name of the package, which is **Controller**
+   - Enter the name of the class, which is **Controller**
    <br><img src="/images/controller-java-class-name.png" alt="controller-java-class-name-image" height= 100 width = 200><br> 
  3. Make the class **Controller** the main driver by adding the following line inside its curly brackets
 ```java
@@ -76,7 +76,7 @@ public static void main(String[] args) {
    guessingGame.startGuessing();
 }
 ```
-7. Because we still haven't created the Game Class the IDE will mark the code avobe as wrong and tell you: Cannot resolve symbol 'Game'.  We will that later
+7. Because we still haven't created the Game Class the IDE will mark the above code as wrong by telling you: Cannot resolve symbol 'Game'.  We will do this in [here](#create-the-game-class)
 
 ### Create the UserInput Class
 1. Create the io package
@@ -86,10 +86,13 @@ public static void main(String[] args) {
    - Click **Package**
    - Enter the name of the package, which is **io**
 2. Create a java class inside the **io** package
-   - On your the left side of the window right click the **app** package
-   <br><img src="/images/app-image.png" alt="app-image" height= 100 width = 200><br>
+   - On your the left side of the window right click the **io** package
+   <br><img src="/images/io-image.png" alt="io-image" height= 150 width = 200><br>
    - Click **New**
    - Click **Java Class**
-   - Enter the name of the package, which is **Controller**
-   <br><img src="/images/io-image.png" alt="io-image" height= 100 width = 200><br> 
+   - Enter the name of the class, which is **UserInput**
+   <br><img src="/images/userInput-class-image.png" alt="userInput-class-image" height= 150 width = 200><br> 
+3. 
 
+
+### Create the Game Class
