@@ -8,7 +8,7 @@ This is a fully functional console-based guessing game written in Java. The game
    - Preferably IntelliJ IDEA Community Edition
    
 ### Complete Project Structure
-<br><img src="/images/create-new-project.png" alt="create-new-project-image" height= 200 width = 200> <br>
+<br><img src="/images/project-strucure.png" alt="project-strucure-image" height= 200 width = 200> <br>
 
 ### Steps for creating a new Project:
 1. Make sure you have install the materials needed
