@@ -2,6 +2,8 @@
 
 This is a fully functional console-based guessing game written in Java. The game tries to guess what number you are thinking of. It follows a binary search algorithm implemented recursively and uses user input that specifies whether the assumption was less than or greater than the number the user wanted. 
 
+So, I think my manual will be explaining how to build a console-based guessing game, written in Java. The game tries to guess what number you are thinking of. It follows a binary search algorithm implemented recursively and uses user input that specifies whether the assumption was less than or greater than the number the user wanted. I think these instructions are geared towards computer science students with a beginner/intermidiate level of proficiency in Java programming who are looking for a tangible implementation of the binary search algorithm with recursion.
+
 ### Materials Needed:
 - JDK (Java Development Kit)
 - IDE (Integreted Development Environment)
