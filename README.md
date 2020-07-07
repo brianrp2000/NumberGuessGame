@@ -82,7 +82,7 @@ public class Controller{
    }
 }
 ```
-7. Because we still haven't created the Game Class the IDE will mark the above code as wrong by telling you: Cannot resolve symbol 'Game'.  We will do this in [here](#create-the-game-class)
+7. Because we still haven't created the Game Class the IDE will mark the above code as wrong by telling you: Cannot resolve symbol 'Game'.We will create the class in [here](#create-the-game-class)
 
 ### Create the UserInput Class
 1. Create the io package
@@ -108,7 +108,7 @@ import java.util.Scanner;
 public class UserInput{
 }
 ```
-4. Inside the UserInput class curly brackets we will need to enter its variables
+4. Inside the **UserInput** class curly brackets we will need to enter its variables
 ```java
 private final Scanner sc = new Scanner(System.in);
 private char input;
@@ -125,6 +125,7 @@ public void setQuestion(String question){
 public char getInput(){
         return input;
 }
+``` 
 7. Create the public method called **scanConsole** that takes a char array as input, this is the method in charge of scanning user input from the console
 ```java
 public void scanConsole(char[] array){
