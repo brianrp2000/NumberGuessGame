@@ -6,8 +6,11 @@ This is a fully functional console-based guessing game written in Java. The game
 - JDK (Java Development Kit)
 - IDE (Integreted Development Environment)
    - Preferably IntelliJ IDEA Community Edition
-### Steps for creating the game:
+   
+### Complete Project Structure
+<br><img src="/images/create-new-project.png" alt="create-new-project-image" height= 200 width = 200> <br>
 
+### Steps for creating a new Project:
 1. Make sure you have install the materials needed
    - [JDK](https://www.java.com/en/download/)
    - [IDE](https://www.jetbrains.com/idea/download/#section=windows)
@@ -21,23 +24,57 @@ This is a fully functional console-based guessing game written in Java. The game
    - Type the name of the project and select its location
    <br><img src="/images/name-location-image.png" alt="name-location-image" height= 200 width = 200><br>
    - Click **Finish**
-3. Create the app package
+   
+### Create the Controller Class
+1. Create the app package
    - On your the left side of the window right click the **scr** file
    <br><img src="/images/src-image.png" alt="src-image" height= 100 width = 200><br>
    - Click **New**
    - Click **Package**
    - Enter the name of the package, which is **app**
-4. Create a java class inside the **app** package
+2. Create a java class inside the **app** package
    - On your the left side of the window right click the **app** package
    <br><img src="/images/app-image.png" alt="app-image" height= 100 width = 200><br>
    - Click **New**
    - Click **Java Class**
    - Enter the name of the package, which is **Controller**
    <br><img src="/images/controller-java-class-name.png" alt="controller-java-class-name-image" height= 100 width = 200><br> 
- 5. Make the class **Controller** the main driver by adding the following line inside its curly brackets
+ 3. Make the class **Controller** the main driver by adding the following line inside its curly brackets
 ```java
-public static void main(String[] args) {
+package app;
+public class Controller{
+   //new line
+   public static void main(String[] args) {
+   }
+}
 
-    }
+```
+4. Import the Game class (We will create this class later)
+```java
+package app;
+
+//new line
+import game.Game; 
+
+public static void main(String[] args) {
+}
+
+5. Create an instance of the **Game class** inside of **main** 
+```java
+package app;
+import game.Game;
+public static void main(String[] args) {
+   //new line added
+   Game guessingGame = new Game();
 }
 ```
+6. The Game class will have a method call **startGuessing** which we will call now
+```java
+public static void main(String[] args) {
+   Game guessingGame = new Game();
+   //new line added
+   guessingGame.startGuessing();
+}
+```
+
+
