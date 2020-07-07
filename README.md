@@ -1,6 +1,6 @@
 # NumberGuessGame
 
-This is a fully functional console-based guessing game written in Java. The game tries to guess what number you are thinking of. It follows a binary search algorithm implemented recursively and uses user input that specifies whether the assumption was less than or greater than the number the user wanted. 
+This is a fully functional console-based guessing game written in Java. The game tries to guess what number you are thinking of. It follows a binary search algorithm implemented recursively and uses user input that specifies whether the assumption was less than or greater than the guess. 
 
 ### Materials Needed:
 - JDK (Java Development Kit)
@@ -147,5 +147,36 @@ private void validateInput(char[] array){
       - We now print the error message
       - Scan the console again for a valid input
       - Call recursively the validateInput method to check again the validity of the input
+7. As we saw in the **validateInput** method, we need to create a method called **printErrorMsg** that takes an char array as an input. This method generates the message we print when the user enters a character outside the possible command range.
+```java
+private void printErrorMsg(char[] array){
+        StringBuilder str = new StringBuilder();
 
+        System.out.println("I am sorry :(");
+
+        if(array.length > 2){
+            for (char aCommand : array) {
+                if(aCommand == array[array.length - 1]){
+                    str.append("or ").append(aCommand);
+                }else {
+                    str.append(aCommand).append(", ");
+                }
+            }
+        }else if(array.length == 2){
+            str.append(array[0]).append(" or ").append(array[1]);
+        }else{
+            str.append(array[0]);
+        }
+
+        System.out.printf("You have to enter %s\n", str);
+    }
+```
+   - First create an instance of a StringBuilder
+   - Print the I am sorry message
+   - Check the length of the array 
+      - If the length is greater than 2, we loop the array checking for the last element in the array to append the string literal "or " before the element. If it isn't the last element we just append the element and then the string literal ", "
+      - If the array has a length of 2, we just have to append the first element, then the string literal " or " and finally the last element
+      - Lastly if neither of the above check run it means the array has only one element, so we just have to append the first element
+   - Print a message with the string we have just built
+   
 ### Create the Game Class
