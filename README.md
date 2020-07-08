@@ -275,7 +275,7 @@ private void guessUsingBinarySearch(int left, int right){
 - Create a variable representing the middle of the range
 - Call the **setQuestion** method from the userInput object
    - Pass as input the **printGuess** method 
-   - The **printGuess** method will have the middle variable as its input
+   - The **printGuess** method will have the middle variable as its input(l, h, y)
 - Call the **scanConsole** method from the userInput object with a char array as input representing the possible user inputs 
 - Create a switch statement to check the value of the input from the user
    - if the value is 'l' that means the number is lower than the guess, so we have to recursively call the method **guessUsingBinarySearch** making middle the limit of the new range
@@ -293,3 +293,24 @@ private String printGuess(int guess){
    return String.format("[%d] Is it %d? (l, h, y): \n", guessCount, guess);
 }
 ```
+9. We also so in the method **guessUsingBinarySearch** the need to design the **playAgain** method, which is the method in charge of asking the user if he wants to play again. 
+```java
+private void playAgain(){
+   userInput.setQuestion("\nDo you want to play again?\nType (y/n)\n");
+   userInput.scanConsole(new char[]{'y', 'n'});
+
+   switch (userInput.getInput()){
+      case 'y':
+          startGuessing();
+          break;
+      case 'n':
+          System.out.println("Bye! Thanks for playing");
+          break;
+   }
+}
+```
+- Call the **setQuestion** method from the userInput object with a string literal as input representing the playagain question
+- Call the **scanConsole** method from the userInput object with a char array as input representing the possible user inputs(y, n)
+- Create a switch statement to check the value of the input from the user
+   - if the input is y, we will call the **starGuessing** method to restart the game
+   - if the input is n, we will print a goodbye message to end the game
