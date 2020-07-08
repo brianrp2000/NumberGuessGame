@@ -249,7 +249,7 @@ private void getInstructions(){
    System.out.println ("\ty (guess is right).");
 }
 ```
-7. We also saw in the method **startGuessing** that we need to create another method called **guessUsingBinarySearch**. This method has 2 inputs: the left part and the right part of the range where the number the user want can be. This method is a recursive implementation of the Binary Search Algorithm, where we have a middle index and in each implementation the range where the number the user want can be is halved by moving the left or right marker to the value of that middle index.
+7. We also saw in the method **startGuessing** that we need to create another method called **guessUsingBinarySearch**. This method has 2 inputs: the left part and the right part of the range where the number the user want can be. This method is a recursive implementation of the Binary Search Algorithm, where we have a middle index and in each implementation the range is halved by moving the left or right marker to the value of that middle index.
 ```java
 private void guessUsingBinarySearch(int left, int right){
    int middle = (left + right) / 2;
@@ -272,5 +272,17 @@ private void guessUsingBinarySearch(int left, int right){
    }
 }
 ```
-- 
+- Create a variable representing the middle of the range
+- Call the **setQuestion** method from the userInput object
+   - Pass as input the **printGuess** method 
+   - The **printGuess** method will have the middle variable as its input
+- Call the **scanConsole** method from the userInput object with a char array as input representing the possible user inputs 
+- Create a switch statement to check the value of the input from the user
+   - if the value is 'l' that means the number is lower than the guess, so we have to recursively call the method **guessUsingBinarySearch** making middle the limit of the new range
+   - if the value is 'h' that means the number is higher than the guess, so we have to recursively call the method **guessUsingBinarySearch** making middle the beginning of the new range
+   - if the value is 'y' that means that we have found the number
+      - print middle
+      - build a string that check if we found the number in just one guess so that we handle the guessCount message correctly
+      - print how many tries took to find the number
+      - call the **playAgain** method
     
