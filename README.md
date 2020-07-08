@@ -286,3 +286,10 @@ private void guessUsingBinarySearch(int left, int right){
       - print how many tries took to find the number
       - call the **playAgain** method
     
+8. As we saw in the method **guessUsingBinarySearch** we have to create the **printGuess** method which returns a String with the guess given as input and a guess count 
+```java
+private String printGuess(int guess){
+   guessCount++;
+   return String.format("[%d] Is it %d? (l, h, y): \n", guessCount, guess);
+}
+```
