@@ -119,24 +119,32 @@ public class UserInput{
 ```
 4. Inside the brackets of the **UserInput** class, we will need to enter its variables
 ```java
+//Copy and paste this code
+
 private final Scanner sc = new Scanner(System.in);
 private char input;
 private String question;
 ``` 
 5. Create a *setter* for the **question** variable 
 ```java
+//Copy and paste this code
+
 public void setQuestion(String question){
         this.question = question;
 }
 ``` 
 6. Create a *getter* for the **input** variable
 ```java
+//Copy and paste this code
+
 public char getInput(){
         return input;
 }
 ``` 
 7. Create the public method called **scanConsole** that takes a char array as input, this is the method in charge of scanning user input from the console
 ```java
+//Copy and paste this code
+
 public void scanConsole(char[] array){
         System.out.print(question);
         input =  sc.next().toLowerCase().charAt(0);
@@ -145,6 +153,8 @@ public void scanConsole(char[] array){
 ```
 8. As we saw in the **scanConsole** method we need to define another method call **validateInput** that takes a char array as input, in here we will make sure that the user enters a command specified in the char array of possible user inputs 
 ```java
+//Copy and paste this code
+
 private void validateInput(char[] array){
    boolean isValidInput = false;
 
@@ -170,27 +180,29 @@ private void validateInput(char[] array){
       - Call recursively the validateInput method to check again the validity of the input
 9. As we saw in the **validateInput** method, we need to create a method called **printErrorMsg** that takes a char array as an input. This method generates the message we print when the user enters a character that cannot be recognized in the array of possible user inputs.
 ```java
+//Copy and paste this code
+
 private void printErrorMsg(char[] array){
-        StringBuilder str = new StringBuilder();
+   StringBuilder str = new StringBuilder();
 
-        System.out.println("I am sorry :(");
+   System.out.println("I am sorry :(");
 
-        if(array.length > 2){
-            for (char aCommand : array) {
-                if(aCommand == array[array.length - 1]){
-                    str.append("or ").append(aCommand);
-                }else {
-                    str.append(aCommand).append(", ");
-                }
-            }
-        }else if(array.length == 2){
-            str.append(array[0]).append(" or ").append(array[1]);
-        }else{
-            str.append(array[0]);
-        }
+   if(array.length > 2){
+      for (char aCommand : array) {
+          if(aCommand == array[array.length - 1]){
+              str.append("or ").append(aCommand);
+          }else {
+              str.append(aCommand).append(", ");
+          }
+      }
+   }else if(array.length == 2){
+      str.append(array[0]).append(" or ").append(array[1]);
+   }else{
+      str.append(array[0]);
+   }
 
-        System.out.printf("You have to enter %s\n", str);
-    }
+   System.out.printf("You have to enter %s\n", str);
+}
 ```
    - First, create an instance of a StringBuilder
    - Print the I am sorry message
@@ -226,12 +238,16 @@ public class Game{
 ```
 4.  Inside the **Game** class curly brackets, we will need to enter its variables
 ```java
+//Copy and paste this code
+
 private final int limit = 100;
 private int guessCount;
 private UserInput userInput;
 ``` 
 5. Create the public method called **startGuessing**, this is the method in charge of initializing variables, print the game instructions and start the function that allows the computer to make guesses
 ```java
+//Copy and paste this code
+
 public void startGuessing(){
         guessCount = 0;
         userInput = new UserInput();
@@ -247,6 +263,8 @@ public void startGuessing(){
       >Note: The input is taking limit+1 so that the we can guesses from 0 to the limit inclusive
 6. As we saw in the method called **startGuessing**, we need to create a method called **getInstructions**. This method just prints what the user needs to know before the computer can start guessing.
 ```java
+//Copy and paste this code
+
 private void getInstructions(){
    System.out.println();
    System.out.printf("Think of a number between 0-%d\n", limit);
@@ -259,6 +277,8 @@ private void getInstructions(){
 7. We also saw in the method **startGuessing** that we need to create another method called **guessUsingBinarySearch**. This method has 2 inputs: the left part and the right part of the range where the number the user wants can be. This method is a recursive implementation of the Binary Search Algorithm; the algorithm begins at the midpoint of the range and halves the range after each guess
 <br><img src="https://www.codesdope.com/staticroot/images/algorithm/binary_search.gif" alt="binary-search-gif" height= 250 width = 300><br>
 ```java
+//Copy and paste this code
+
 private void guessUsingBinarySearch(int left, int right){
    int middle = (left + right) / 2;
    userInput.setQuestion(printGuess(middle));
@@ -296,6 +316,8 @@ private void guessUsingBinarySearch(int left, int right){
     
 8. As we saw in the method **guessUsingBinarySearch** we have to create the **printGuess** method which returns a String with the guess given as input 
 ```java
+//Copy and paste this code
+
 private String printGuess(int guess){
    guessCount++;
    return String.format("[%d] Is it %d? (l, h, y): \n", guessCount, guess);
@@ -303,6 +325,8 @@ private String printGuess(int guess){
 ```
 9. We also so in the method **guessUsingBinarySearch** the need to design the **playAgain** method, which is the method in charge of asking the user if he wants to play again. 
 ```java
+//Copy and paste this code
+
 private void playAgain(){
    userInput.setQuestion("\nDo you want to play again?\nType (y/n)\n");
    userInput.scanConsole(new char[]{'y', 'n'});
