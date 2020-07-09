@@ -20,9 +20,13 @@ These instructions are geared towards computer science students with a beginner/
 2. Creating a new java project
    - Open IntelliJ IDEA to begin creating a new project
    - Click on **Create New Project**
-   <br><img src="/images/create-new-project.png" alt="create-new-project-image" height= 200 width = 200> <br>
-   - Click **Next**. Make sure you have selected the project SDK
-   <br><img src="/images/next-image.png" alt="next-image" height= 200 width = 200><br>
+   <br><img src="/images/create-new-project.png" alt="create-new-project-image" height= 300 width = 300> <br>
+   - Make sure you have selected the project SDK
+      - If you dont have JDK installed, you can just click **Dowload JDK**
+   <br><img src="/images/download-jdk-image.png" alt="download-jdk-image" height= 200 width = 200><br>
+      - Then click the **Donwload** button to use Oracle OpenJDK
+   <br><img src="/images/download-image.png" alt="download-image" height= 100 width = 200> <br>
+   - Click **Next**. 
    - Click **Next** again
    - Type the name of the project and select its location
    <br><img src="/images/name-location-image.png" alt="name-location-image" height= 200 width = 200><br>
