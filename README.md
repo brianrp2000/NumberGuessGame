@@ -324,8 +324,8 @@ private void playAgain(){
    - if the input is n, we will print a goodbye message to end the game
 
 ### Run the Game
-1. If it is the first time the program has been run
-   - Use the following shortcut (**Alt + Shift + F10**)for running the program
-   - Make sure FnLock is on. If FnLock if off you won't we able to press the F10 key, we can solve this by using **Fn + Esc**
-   - Click the **Controller** class
+If it is the first time the program has been run
+  - Use the following shortcut (**Alt + Shift + F10**)for running the program
+  - Make sure FnLock is on. If FnLock if off you won't we able to press the F10 key, we can solve this by using **Fn + Esc**
+  - Click the **Controller** class
    
