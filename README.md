@@ -33,20 +33,22 @@ These instructions are geared towards computer science students with a beginner/
    - Click **Finish**
    
 ### Create the Controller Class 
-1. Create the app package
+1. Look and click at the left side of the window for the **Project** tab
+2. Click on **NumberGuessGame** 
+3. Create the app package
    - On the left side of the window, right-click the **src** file
    <br><img src="/images/src-image.png" alt="src-image" height= 100 width = 200><br>
    - Click **New**
    - Click **Package**
    - Enter the name of the package, which is **app**
-2. Create a java class inside the **app** package
+4. Create a java class inside the **app** package
    - On the left side of the window, right-click the **app** package
    <br><img src="/images/app-image.png" alt="app-image" height= 100 width = 200><br>
    - Click **New**
    - Click **Java Class**
    - Enter the name of the class, which is **Controller**
    <br><img src="/images/controller-java-class-name.png" alt="controller-java-class-name-image" height= 100 width = 200><br> 
- 3. Make the class **Controller** the main driver by adding the following line inside its curly brackets
+ 5. Make the class **Controller** the main driver by adding the following line inside its curly brackets
 ```java
 package app;
 public class Controller{
@@ -55,7 +57,7 @@ public class Controller{
    }
 }
 ```
-4. Import the Game class
+6. Import the Game class
 ```java
 package app;
 
@@ -67,7 +69,7 @@ public class Controller{
    }
 }
 ```
-5. Create an instance of the **Game class** inside of **main** 
+7. Create an instance of the **Game class** inside of **main** 
 ```java
 package app;
 import game.Game;
@@ -78,7 +80,7 @@ public class Controller{
    }
 }
 ```
-6. The Game class will have a method call **startGuessing** which we will call now
+8. The Game class will have a method call **startGuessing** which we will call now
 ```java
 public class Controller{
    public static void main(String[] args) {
@@ -88,7 +90,7 @@ public class Controller{
    }
 }
 ```
-7. Because we still haven't created the Game Class the IDE will mark the above code as wrong by telling you: Cannot resolve symbol 'Game'.We will create the class in [here](#create-the-game-class)
+9. Because we still haven't created the Game Class the IDE will mark the above code as wrong by telling you: Cannot resolve symbol 'Game'.We will create the class in [here](#create-the-game-class)
 
 ### Create the UserInput Class
 1. Create the io package
