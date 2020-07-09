@@ -162,7 +162,7 @@ private void validateInput(char[] array){
    }
  }
 ```
-   - the first thing the method does is declaring a boolean variable that will track the validity of the user input
+   - the first thing the method does is declare a boolean variable that will track the validity of the user input
    - Then we check if the user input is found in the char array taken as input and if it is the variable will change to true
    - Eventually, we check if the variable is still false if so it means that the user input is invalid
       - We now print the error message
@@ -197,7 +197,7 @@ private void printErrorMsg(char[] array){
    - Check the length of the array 
       - If the length is greater than 2, we loop the array checking for the last element in the array to append the string literal "or " before the element. If it isn't the last element we just append the element and then the string literal ", "
       - If the array has a length of 2, we just have to append the first element, then the string literal " or " and finally the last element
-      - Lastly if neither of the above check run it means the array has only one element, so we just have to append the first element
+      - Lastly, if neither of the above checks is executed it means the array has only one element, so we just have to append the first element
    - Print a message with the string we have just built
    
 ### Create the Game Class
@@ -322,3 +322,10 @@ private void playAgain(){
 - Create a switch statement to check the value of the input from the user
    - if the input is y, we will call the **starGuessing** method to restart the game
    - if the input is n, we will print a goodbye message to end the game
+
+### Run the Game
+1. If it is the first time the program has been run
+   - Use the following shortcut (**Alt + Shift + F10**)for running the program
+   - Make sure FnLock is on. If FnLock if off you won't we able to press the F10 key, we can solve this by using **Fn + Esc**
+   - Click the **Controller** class
+   
