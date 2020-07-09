@@ -249,7 +249,7 @@ private void getInstructions(){
    System.out.println ("\ty (guess is right).");
 }
 ```
-7. We also saw in the method **startGuessing** that we need to create another method called **guessUsingBinarySearch**. This method has 2 inputs: the left part and the right part of the range where the number the user wants can be. This method is a recursive implementation of the Binary Search Algorithm, where the algorithm begins at the midpoint of the range and halves the range after each guess
+7. We also saw in the method **startGuessing** that we need to create another method called **guessUsingBinarySearch**. This method has 2 inputs: the left part and the right part of the range where the number the user wants can be. This method is a recursive implementation of the Binary Search Algorithm; the algorithm begins at the midpoint of the range and halves the range after each guess
 <br><img src="https://www.codesdope.com/staticroot/images/algorithm/binary_search.gif" alt="binary-search-gif" height= 250 width = 300><br>
 ```java
 private void guessUsingBinarySearch(int left, int right){
