@@ -30,7 +30,7 @@ These instructions are geared towards computer science students with a beginner/
    
 ### Create the Controller Class 
 1. Create the app package
-   - On your the left side of the window right click the **scr** file
+   - On your the left side of the window right click the **src** file
    <br><img src="/images/src-image.png" alt="src-image" height= 100 width = 200><br>
    - Click **New**
    - Click **Package**
@@ -88,7 +88,7 @@ public class Controller{
 
 ### Create the UserInput Class
 1. Create the io package
-   - On your the left side of the window right click the **scr** file
+   - On your the left side of the window right click the **src** file
    <br><img src="/images/src-io-image.png" alt="src-io-image" height= 100 width = 200><br>
    - Click **New**
    - Click **Package**
