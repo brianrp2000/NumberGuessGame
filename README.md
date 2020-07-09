@@ -57,7 +57,9 @@ public class Controller{
    }
 }
 ```
-6. Import the Game class
+6. Because we still haven't created the Game Class the IDE will mark the code below as wrong by telling you: Cannot resolve symbol 'Game'. We will create the class in [here](#create-the-game-class) but we will write the code for the Controller class first
+
+7. Import the Game class
 ```java
 package app;
 
@@ -69,7 +71,7 @@ public class Controller{
    }
 }
 ```
-7. Create an instance of the **Game class** inside of **main** 
+8. Create an instance of the **Game class** inside of **main** 
 ```java
 package app;
 import game.Game;
@@ -80,7 +82,7 @@ public class Controller{
    }
 }
 ```
-8. The Game class will have a method call **startGuessing** which we will call now
+9. The Game class will have a method call **startGuessing** which we will call now
 ```java
 public class Controller{
    public static void main(String[] args) {
@@ -90,7 +92,6 @@ public class Controller{
    }
 }
 ```
-9. Because we still haven't created the Game Class the IDE will mark the above code as wrong by telling you: Cannot resolve symbol 'Game'.We will create the class in [here](#create-the-game-class)
 
 ### Create the UserInput Class
 1. Create the io package
