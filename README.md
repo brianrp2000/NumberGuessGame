@@ -110,7 +110,7 @@ import java.util.Scanner;
 public class UserInput{
 }
 ```
-4. Inside the **UserInput** class curly brackets we will need to enter its variables
+4. Inside the brackets of the **UserInput** class, we will need to enter its variables
 ```java
 private final Scanner sc = new Scanner(System.in);
 private char input;
@@ -136,7 +136,7 @@ public void scanConsole(char[] array){
         validateInput(array);
 }
 ```
-8. As we saw in the **scanConsole** method we need to define another method call **validateInput** that takes a char array as input, in here we will make sure that the user enters a command specified in the char array of possible user commands 
+8. As we saw in the **scanConsole** method we need to define another method call **validateInput** that takes a char array as input, in here we will make sure that the user enters a command specified in the char array of possible user inputs 
 ```java
 private void validateInput(char[] array){
    boolean isValidInput = false;
