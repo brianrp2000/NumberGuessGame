@@ -2,11 +2,11 @@
 
 This is a fully functional console-based guessing game written in Java. The game tries to guess what number you are thinking of. It follows a binary search algorithm implemented recursively and uses user input that specifies whether the assumption was less than or greater than the number the user wanted. 
 
-These instructions are geared towards computer science students with a beginner/intermidiate level of proficiency in Java programming who are looking for a tangible implementation of the binary search algorithm with recursion.
+These instructions are geared towards computer science students with a beginner/intermediate level of proficiency in Java programming who are looking for a tangible implementation of the binary search algorithm with recursion.
 
 ### Materials Needed:
 - JDK (Java Development Kit)
-- IDE (Integreted Development Environment)
+- IDE (Integrated Development Environment)
    - Preferably IntelliJ IDEA Community Edition
    
 ### Complete Project Structure
@@ -23,20 +23,20 @@ These instructions are geared towards computer science students with a beginner/
    <br><img src="/images/create-new-project.png" alt="create-new-project-image" height= 200 width = 200> <br>
    - Click **Next**. Make sure you have selected the project SDK
    <br><img src="/images/next-image.png" alt="next-image" height= 200 width = 200><br>
-   - CLick **Next** again
+   - Click **Next** again
    - Type the name of the project and select its location
    <br><img src="/images/name-location-image.png" alt="name-location-image" height= 200 width = 200><br>
    - Click **Finish**
    
 ### Create the Controller Class 
 1. Create the app package
-   - On your the left side of the window right click the **src** file
+   - On the left side of the window, right-click the **src** file
    <br><img src="/images/src-image.png" alt="src-image" height= 100 width = 200><br>
    - Click **New**
    - Click **Package**
    - Enter the name of the package, which is **app**
 2. Create a java class inside the **app** package
-   - On your the left side of the window right click the **app** package
+   - On the left side of the window, right-click the **app** package
    <br><img src="/images/app-image.png" alt="app-image" height= 100 width = 200><br>
    - Click **New**
    - Click **Java Class**
@@ -88,13 +88,13 @@ public class Controller{
 
 ### Create the UserInput Class
 1. Create the io package
-   - On your the left side of the window right click the **src** file
+   - On the left side of the window, right-click the **src** file
    <br><img src="/images/src-io-image.png" alt="src-io-image" height= 100 width = 200><br>
    - Click **New**
    - Click **Package**
    - Enter the name of the package, which is **io**
 2. Create a java class inside the **io** package
-   - On your the left side of the window right click the **io** package
+   - On the left side of the window, right-click the **io** package
    <br><img src="/images/io-image.png" alt="io-image" height= 150 width = 200><br>
    - Click **New**
    - Click **Java Class**
@@ -157,11 +157,11 @@ private void validateInput(char[] array){
 ```
    - the first thing the method does is declaring a boolean variable that will track the validity of the user input
    - Then we check if the user input is found in the char array taken as input and if it is the variable will change to true
-   - Eventually we check if the variable is still false, if so it means that the user input is invalid
+   - Eventually, we check if the variable is still false if so it means that the user input is invalid
       - We now print the error message
       - Scan the console again for a valid input
       - Call recursively the validateInput method to check again the validity of the input
-9. As we saw in the **validateInput** method, we need to create a method called **printErrorMsg** that takes an char array as an input. This method generates the message we print when the user enters a character outside the possible command range.
+9. As we saw in the **validateInput** method, we need to create a method called **printErrorMsg** that takes a char array as an input. This method generates the message we print when the user enters a character that cannot be recognized in the array of possible user inputs.
 ```java
 private void printErrorMsg(char[] array){
         StringBuilder str = new StringBuilder();
@@ -185,7 +185,7 @@ private void printErrorMsg(char[] array){
         System.out.printf("You have to enter %s\n", str);
     }
 ```
-   - First create an instance of a StringBuilder
+   - First, create an instance of a StringBuilder
    - Print the I am sorry message
    - Check the length of the array 
       - If the length is greater than 2, we loop the array checking for the last element in the array to append the string literal "or " before the element. If it isn't the last element we just append the element and then the string literal ", "
@@ -195,13 +195,13 @@ private void printErrorMsg(char[] array){
    
 ### Create the Game Class
 1. Create the game package
-   - On your the left side of the window right click the **scr** file
+   - On the left side of the window, right-click the **src** file
    <br><img src="/images/src-game-image.png" alt="src-game-image" height= 150 width = 200><br>
    - Click **New**
    - Click **Package**
    - Enter the name of the package, which is **game**
 2. Create a java class inside the **game** package
-   - On your the left side of the window right click the **game** package
+   - On the left side of the window, right-click the **game** package
    <br><img src="/images/game-image.png" alt="game-image" height= 150 width = 200><br>
    - Click **New**
    - Click **Java Class**
@@ -217,13 +217,13 @@ import io.UserInput;
 public class Game{
 }
 ```
-4.  Inside the **Game** class curly brackets we will need to enter its variables
+4.  Inside the **Game** class curly brackets, we will need to enter its variables
 ```java
 private final int limit = 100;
 private int guessCount;
 private UserInput userInput;
 ``` 
-5. Create the public method called **startGuessing**, this is the method in charge of initializing variables and start the function that allows the computer to make guesses
+5. Create the public method called **startGuessing**, this is the method in charge of initializing variables, print the game instructions and start the function that allows the computer to make guesses
 ```java
 public void startGuessing(){
         guessCount = 0;
@@ -236,9 +236,9 @@ public void startGuessing(){
    - Initialize the guessCount variable
    - Create a UserInput object
    - Print the instruction of the game
-   - Call the method in charge of guessing with a left input of zero and a right input of limit+1
-      >Note: The input is taking limit+1 so that the range of guesses go from 0 to the limit inclusive
-6. As we saw in the method called **startGuessing**, we need to create a method call **getInstructions**. This method just prints what the user needs to know before the computer can start guessing.
+   - Call the method in charge of guessing with inputs 0 and limit+1
+      >Note: The input is taking limit+1 so that the we can guesses from 0 to the limit inclusive
+6. As we saw in the method called **startGuessing**, we need to create a method called **getInstructions**. This method just prints what the user needs to know before the computer can start guessing.
 ```java
 private void getInstructions(){
    System.out.println();
@@ -249,7 +249,8 @@ private void getInstructions(){
    System.out.println ("\ty (guess is right).");
 }
 ```
-7. We also saw in the method **startGuessing** that we need to create another method called **guessUsingBinarySearch**. This method has 2 inputs: the left part and the right part of the range where the number the user want can be. This method is a recursive implementation of the Binary Search Algorithm, where we have a middle index and in each implementation the range is halved by moving the left or right marker to the value of that middle index.
+7. We also saw in the method **startGuessing** that we need to create another method called **guessUsingBinarySearch**. This method has 2 inputs: the left part and the right part of the range where the number the user wants can be. This method is a recursive implementation of the Binary Search Algorithm, where the algorithm begins at the midpoint of the range and halves the range after each guess
+<br><img src="https://www.codesdope.com/staticroot/images/algorithm/binary_search.gif" alt="binary-search-gif" height= 250 width = 300><br>
 ```java
 private void guessUsingBinarySearch(int left, int right){
    int middle = (left + right) / 2;
@@ -275,18 +276,18 @@ private void guessUsingBinarySearch(int left, int right){
 - Create a variable representing the middle of the range
 - Call the **setQuestion** method from the userInput object
    - Pass as input the **printGuess** method 
-   - The **printGuess** method will have the middle variable as its input(l, h, y)
-- Call the **scanConsole** method from the userInput object with a char array as input representing the possible user inputs 
+   - The **printGuess** method will have the middle variable as its input
+- Call the **scanConsole** method from the userInput object with a char array as input representing the possible user inputs (l, h, y)
 - Create a switch statement to check the value of the input from the user
    - if the value is 'l' that means the number is lower than the guess, so we have to recursively call the method **guessUsingBinarySearch** making middle the limit of the new range
    - if the value is 'h' that means the number is higher than the guess, so we have to recursively call the method **guessUsingBinarySearch** making middle the beginning of the new range
    - if the value is 'y' that means that we have found the number
       - print middle
-      - build a string that check if we found the number in just one guess so that we handle the guessCount message correctly
+      - build a string that checks if we found the number in just one guess so that we handle the guessCount message correctly
       - print how many tries took to find the number
       - call the **playAgain** method
     
-8. As we saw in the method **guessUsingBinarySearch** we have to create the **printGuess** method which returns a String with the guess given as input and a guess count 
+8. As we saw in the method **guessUsingBinarySearch** we have to create the **printGuess** method which returns a String with the guess given as input 
 ```java
 private String printGuess(int guess){
    guessCount++;
