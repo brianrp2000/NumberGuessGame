@@ -347,9 +347,16 @@ private void playAgain(){
    - if the input is y, we will call the **starGuessing** method to restart the game
    - if the input is n, we will print a goodbye message to end the game
 
-### Run the Game
-If this is the first time the program is run
-  - Use the following shortcut (**Alt + Shift + F10**)for running the program
-  - Make sure FnLock is on. If FnLock if off you won't we able to press the F10 key, we can solve this by using **Fn + Esc**
-  - Click the **Controller** class
+### How to Run the Game
+1. If this is the first time the program is run and your keyboard has the **Fn** key.
+   - Use the following shortcut (**Alt + Shift + F10**)for running the program
+   > Make sure FnLock is on. If FnLock if off you won't we able to press the F10 key, we can solve this by using **Fn + Esc**
+   - Click the **Controller** class
+2. If your keyboard doesn't have the **Fn** key
+   - Double click the **Controller** class inside the **app** package
+<br><img src="/images/select-controller-image.png" alt="select-controller-image" height= 150 width = 200><br>
+   - Click the run button(green arrow) next to the **Controller** class declaration
+<br><img src="/images/run-button-image.png" alt="run-button-image" height= 150 width = 200><br> 
+  
+      
    
