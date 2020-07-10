@@ -356,7 +356,7 @@ private void playAgain(){
    - Double click the **Controller** class inside the **app** package
 <br><img src="/images/select-controller-image.png" alt="select-controller-image" height= 150 width = 200><br>
    - Click the run button(green arrow) next to the **Controller** class declaration
-<br><img src="/images/run-button-image.png" alt="run-button-image" height= 150 width = 200><br> 
+<br><img src="/images/run-button-image.png" alt="run-button-image" height= 200 width = 200><br> 
   
       
    
